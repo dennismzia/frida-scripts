@@ -3,9 +3,9 @@
 # starts the frida server if not started
 startfrida()
 usage="hook.sh com.package.android fridascript.js"
-if [[ $1 == "" ]]; then
+if [ -z $1 ]; then
     #statements
-    echo $usage
+    echo "hook.sh com.package.android fridascript.js"
     exit
 fi
-python3 hook.py $1 $2
+python3 ~/scripts/hook.py $1 $2
